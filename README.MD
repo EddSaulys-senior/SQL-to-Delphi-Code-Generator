@@ -20,7 +20,6 @@
 
 - **IDE**: Delphi 11 Alexandria.
 - **Компоненты доступа**: [Devart UniDAC](https://www.devart.com/unidac/) (провайдер SQLite).
-- **Интерфейс**: [DevExpress VCL](https://www.devexpress.com/vcl) (cxGrid, cxEditors).
 - **Редактор кода**: [SynEdit](https://github.com/SynEdit/SynEdit).
 
 ## 🚀 Быстрый старт
