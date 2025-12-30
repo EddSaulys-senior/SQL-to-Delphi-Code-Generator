@@ -6,6 +6,10 @@
 
 Инструмент разработчика для мгновенного превращения SQL-запросов в оптимизированный код на Object Pascal (Delphi). Идеально подходит для тех, кто работает с UniDAC и хочет избавиться от рутины.
 
+<p align="center">
+  <img src="https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/main/SQLCodeGenerator.png" alt="Symlink Creator Master" width="600">
+</p>
+
 ## ✨ Ключевые особенности
 
 - **Smart Code Generation**: Превращает сырой SQL в аккуратный блок кода `TUniQuery` с поддержкой `BeginUpdate/EndUpdate`.
