@@ -3,7 +3,7 @@ object DBGrid: TDBGrid
   Top = 0
   Caption = 'DbGrid'
   ClientHeight = 569
-  ClientWidth = 932
+  ClientWidth = 1215
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,13 +16,20 @@ object DBGrid: TDBGrid
   object DBGridEh1: TDBGridEh
     Left = 0
     Top = 0
-    Width = 932
+    Width = 1215
     Height = 569
     Align = alClient
     DataSource = UniDataSource1
     DrawMemoText = True
     DynProps = <>
+    IndicatorOptions = [gioShowRowIndicatorEh, gioShowRecNoEh]
+    OddRowColor = clMenu
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghDialogFind, dghShowRecNo, dghColumnResize, dghColumnMove, dghExtendVertLines]
+    ReadOnly = True
+    SortLocal = True
     TabOrder = 0
+    TitleParams.MultiTitle = True
     object RowDetailData: TRowDetailPanelControlEh
     end
   end

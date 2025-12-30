@@ -7,7 +7,8 @@ uses
   System.Classes, Vcl.Graphics, System.RegularExpressions, DBGridEh,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, SynEdit,
   SynEditCodeFolding, SynHighlighterPas, SynEditHighlighter, SynHighlighterSQL,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, Vcl.Buttons, System.ImageList, Vcl.ImgList, cxImageList,
+  cxGraphics;
 
 type
   // Объявляем вспомогательный класс
@@ -25,11 +26,13 @@ type
     Panel2: TPanel;
     memsource: TSynEdit;
     memTarget: TSynEdit;
+    SpeedButton1: TSpeedButton;
+    cxImageList1: TcxImageList;
     procedure btnGenerateClickClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure memTargetDblClick(Sender: TObject);
     procedure chkUseTempClick(Sender: TObject);
-    procedure chbConnectToDBClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     procedure SetupHighlighter;
     procedure SetDialectByProvider(const ProviderName: string);
@@ -141,7 +144,10 @@ begin
   TDBGridEhHack(Grid).LayoutChanged;
 
   for i := 0 to Grid.Columns.Count - 1 do
+  begin
     Grid.Columns[i].OptimizeWidth;
+    Grid.Columns[i].Title.Alignment := taCenter;
+  end;
 end;
 
 procedure TForm1.btnGenerateClickClick(Sender: TObject);
@@ -185,11 +191,6 @@ begin
   // В SynEdit параметры часто подсвечиваются как переменные (Variables)
   SynSQLSyn1.VariableAttri.Foreground := clTeal;
   SynSQLSyn1.VariableAttri.Style := [fsBold];
-end;
-
-procedure TForm1.chbConnectToDBClick(Sender: TObject);
-begin
-  Connection.ShowModal;
 end;
 
 procedure TForm1.chkUseTempClick(Sender: TObject);
@@ -263,5 +264,10 @@ begin
   memTarget.Options := memTarget.Options - [eoShowSpecialChars];
 end;
 
+
+procedure TForm1.SpeedButton1Click(Sender: TObject);
+begin
+  Connection.ShowModal;
+end;
 
 end.
