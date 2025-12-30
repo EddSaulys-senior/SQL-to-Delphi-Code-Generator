@@ -7,7 +7,7 @@
 Инструмент разработчика для мгновенного превращения SQL-запросов в оптимизированный код на Object Pascal (Delphi). Идеально подходит для тех, кто работает с UniDAC и хочет избавиться от рутины.
 
 <p align="center">
-  <img src="SQLCodeGenerator.png" alt="Symlink Creator Master" width="600">
+  <img src="SQLCodeGenerator.png" alt="Symlink Creator Master">
 </p>
 
 ## ✨ Ключевые особенности
