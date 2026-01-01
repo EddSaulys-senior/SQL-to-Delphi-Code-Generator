@@ -32,16 +32,16 @@ object Form1: TForm1
       Caption = 'Connect:'
     end
     object SpeedButton1: TSpeedButton
-      Left = 648
-      Top = 16
-      Width = 23
-      Height = 22
+      Left = 504
+      Top = 13
+      Width = 27
+      Height = 26
       ImageIndex = 0
       Images = cxImageList1
       OnClick = SpeedButton1Click
     end
     object chbConnectToDB: TCheckBox
-      Left = 512
+      Left = 544
       Top = 18
       Width = 130
       Height = 17
@@ -51,7 +51,7 @@ object Form1: TForm1
     object btnGenerateClick: TButton
       Left = 349
       Top = 14
-      Width = 131
+      Width = 140
       Height = 25
       Caption = 'Convert SQL-Delphi'
       TabOrder = 1
@@ -59,7 +59,7 @@ object Form1: TForm1
     end
     object chkUseTemp: TCheckBox
       Left = 246
-      Top = 19
+      Top = 18
       Width = 97
       Height = 17
       Caption = 'Create/Free'
@@ -70,7 +70,7 @@ object Form1: TForm1
     end
     object UniConnectionUnit: TEdit
       Left = 72
-      Top = 16
+      Top = 15
       Width = 153
       Height = 23
       TabOrder = 3

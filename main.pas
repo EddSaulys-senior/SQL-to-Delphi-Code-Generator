@@ -8,7 +8,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, SynEdit,
   SynEditCodeFolding, SynHighlighterPas, SynEditHighlighter, SynHighlighterSQL,
   Vcl.ExtCtrls, Vcl.Buttons, System.ImageList, Vcl.ImgList, cxImageList,
-  cxGraphics;
+  cxGraphics, DFCodeFormatting, SynEditTypes;
 
 type
   // Объявляем вспомогательный класс
@@ -52,6 +52,36 @@ implementation
 {$R *.dfm}
 
 uses fConnect, fGrid;
+
+procedure FormatSql_SynEditSafe(ASyn: TSynEdit);
+var
+  OldOptions: TSynEditorOptions;
+  OldCaret: TBufferCoord;
+  OldTop: Integer;
+  SOut: string;
+begin
+  OldOptions := ASyn.Options;
+  OldCaret := ASyn.CaretXY;
+  OldTop := ASyn.TopLine;
+
+  // Важно: временно убираем авто-отступы/умные табы
+  ASyn.Options := ASyn.Options - [eoAutoIndent, eoSmartTabs, eoTabsToSpaces];
+
+  SOut := TCodeFormatter.FormatSQL(ASyn.Lines.Text,
+    TCodeFormatter.TIndentationType.Spaces, 2);
+
+  ASyn.BeginUpdate;
+  try
+    // Самая "чистая" замена — через Lines.Text (без SelText)
+    ASyn.Lines.Text := SOut;
+
+    ASyn.CaretXY := OldCaret;
+    ASyn.TopLine := OldTop;
+  finally
+    ASyn.EndUpdate;
+    ASyn.Options := OldOptions; // вернуть как было
+  end;
+end;
 
 function GenerateEliteSQLCode(const ASQL, AConnectionOrQueryName: string; AUseTemp: Boolean): string;
 var
@@ -151,9 +181,14 @@ begin
 end;
 
 procedure TForm1.btnGenerateClickClick(Sender: TObject);
+var
+  MinifiedSQL: string;
 begin
   if memSource.Text = '' then
     Exit;
+
+  MinifiedSQL := TCodeFormatter.MinifySQL(memsource.Lines.Text);
+  memsource.Lines.Text := MinifiedSQL;
 
   // Вызываем функцию с учетом состояния чекбокса
   memTarget.Text := GenerateEliteSQLCode(memsource.Text, UniConnectionUnit.Text,
@@ -263,7 +298,6 @@ begin
   // Отключаем лишние символы
   memTarget.Options := memTarget.Options - [eoShowSpecialChars];
 end;
-
 
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin

@@ -6,7 +6,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   fGrid in 'fGrid.pas' {DBGrid},
-  fConnect in 'fConnect.pas' {Connection};
+  fConnect in 'fConnect.pas' {Connection},
+  DFCodeFormatting in 'DFCodeFormatting.pas';
 
 {$R *.res}
 
