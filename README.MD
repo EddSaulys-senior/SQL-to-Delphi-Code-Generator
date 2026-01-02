@@ -2,7 +2,7 @@
 
 [![Delphi Version](https://img.shields.io/badge/Delphi-11%20Alexandria-blue.svg)](https://www.embarcadero.com/products/delphi)
 [![Database](https://img.shields.io/badge/Database-UniDAC%2010.3-red.svg)](https://www.devart.com/unidac/)
-[![UI](https://img.shields.io/badge/UI-DevExpress%20VCL-orange.svg)](https://www.devexpress.com/vcl)
+[![UI](https://img.shields.io/badge/EhLib%20VCL-blue.svg)](https://ehlib.com/vcl)
 
 Инструмент разработчика для мгновенного превращения SQL-запросов в оптимизированный код на Object Pascal (Delphi). Идеально подходит для тех, кто работает с UniDAC и хочет избавиться от рутины.
 
