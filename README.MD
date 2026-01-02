@@ -10,7 +10,7 @@
   <img src="SQLCodeGenerator.png" alt="Symlink Creator Master">
 </p>
 
-[![Download](https://img.shields.io/badge/Download-Last%20version-blue?style=for-the-badge)](https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/releases/download/v1.0.0/SQLCodeGenerator.exe)
+[![Download (latest)](https://img.shields.io/github/v/release/EddSaulys-senior/SQL-to-Delphi-Code-Generator?label=Download&style=for-the-badge)](https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/releases/latest/download/SQLCodeGenerator.exe)
 
 ## ✨ Ключевые особенности
 
