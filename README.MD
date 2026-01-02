@@ -10,6 +10,8 @@
   <img src="SQLCodeGenerator.png" alt="Symlink Creator Master">
 </p>
 
+[![Download latest](https://img.shields.io/badge/Download-Latest-blue?style=for-the-badge)](https://github.com/<OWNER>/<REPO>/releases/latest)
+
 ## ✨ Ключевые особенности
 
 - **Smart Code Generation**: Превращает сырой SQL в аккуратный блок кода `TUniQuery` с поддержкой `BeginUpdate/EndUpdate`.
@@ -42,6 +44,8 @@
 ## 📄 Лицензия
 
 Проект распространяется под лицензией MIT. Полные исходные коды доступны для изучения и модернизации.
+
+[![GitHub release](https://img.shields.io/github/v/release/<OWNER>/<REPO>?style=for-the-badge)](https://github.com/<OWNER>/<REPO>/releases/latest)
 
 ---
 
