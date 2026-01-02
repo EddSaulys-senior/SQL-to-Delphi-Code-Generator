@@ -1,5 +1,4 @@
 ﻿# SQL-to-Delphi Code Generator (Pro Edition) 🚀
-[![Latest release](https://img.shields.io/github/v/release/EddSaulys-senior/SQL-to-Delphi-Code-Generator?style=for-the-badge)](https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/releases/latest)
 
 [![Delphi Version](https://img.shields.io/badge/Delphi-11%20Alexandria-blue.svg)](https://www.embarcadero.com/products/delphi)
 [![Database](https://img.shields.io/badge/Database-UniDAC%2010.3-red.svg)](https://www.devart.com/unidac/)
@@ -12,6 +11,7 @@
 </p>
 
 [![Download (latest)](https://img.shields.io/github/v/release/EddSaulys-senior/SQL-to-Delphi-Code-Generator?label=Download&style=for-the-badge)](https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/releases/latest/download/SQLCodeGenerator.exe)
+[![Latest release](https://img.shields.io/github/v/release/EddSaulys-senior/SQL-to-Delphi-Code-Generator?style=for-the-badge)](https://github.com/EddSaulys-senior/SQL-to-Delphi-Code-Generator/releases/latest)
 
 ## ✨ Ключевые особенности
 
